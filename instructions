@@ -1,0 +1,27 @@
+# Update && Upgrade
+sudo apt update && sudo apt -y upgrade
+
+# Install Python3
+sudo apt install python3
+# Install Flask
+python3 -m pip install Flask
+
+# Create directories and download files
+mkdir /home/pi/homepage
+cd /home/pi/homepage
+wget https://raw.githubusercontent.com/apomps/homepage/main/pi_api.py
+wget https://raw.githubusercontent.com/apomps/homepage/main/docker-compose.yml
+
+mkdir /home/pi/homepage/html
+cd /home/pi/homepage/html
+wget https://raw.githubusercontent.com/apomps/homepage/main/index.php
+wget https://github.com/apomps/homepage/blob/main/kenobi.png
+
+# Build container
+cd /home/pi/homepage
+docker compose up -d
+# Run Flask API
+nohup python3 pi_api.py
+
+#To find Fask process and stop it
+sudo netstat -tulnp | grep :5000
