@@ -13,7 +13,7 @@ def get_client():
     client_ip = request.args.get('ip')
     result={}
     time_now = datetime.now().strftime("%I:%M %m/%d/%Y")
-    cmd = ['arp', '-n', client_ip]
+    cmd = ['arp', '-na', client_ip]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     o, e = proc.communicate()
     arp_result = o.decode('ascii')
