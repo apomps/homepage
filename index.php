@@ -47,7 +47,7 @@ $remote_port = $_SERVER['REMOTE_PORT'];
 $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 //API to get ARP and queries
-$url = "http://192.168.15.2:5000/client?ip={$remote_addr}";
+$url = "http://192.168.1.2:5000/client?ip={$remote_addr}";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
