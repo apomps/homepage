@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/apomps/homepage/main/docker-compose.yml
 mkdir /home/pi/homepage/html
 cd /home/pi/homepage/html
 wget https://raw.githubusercontent.com/apomps/homepage/main/index.php
-wget https://github.com/apomps/homepage/blob/main/kenobi.png
+wget https://raw.githubusercontent.com/apomps/homepage/main/kenobi.png
 
 # Build container
 cd /home/pi/homepage
